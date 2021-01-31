@@ -3,7 +3,7 @@
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <TypeScriptCompileBlocked>true</TypeScriptCompileBlocked>
-    <TypeScriptToolsVersion>Latest</TypeScriptToolsVersion>
+    <TypeScriptToolsVersion>4.1</TypeScriptToolsVersion>
     <IsPackable>false</IsPackable>
     <SpaRoot>ClientApp\</SpaRoot>
     <DefaultItemExcludes>$(DefaultItemExcludes);$(SpaRoot)node_modules\**</DefaultItemExcludes>
@@ -24,7 +24,18 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Remove="src\app\constants\side-nav-directions.ts" />
+    <None Remove="src\app\constants\splash-animation-type.ts" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Folder Include="Controllers\v1\" />
+    <Folder Include="src\assets\icons\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <TypeScriptCompile Include="src\app\constants\side-nav-directions.ts" />
+    <TypeScriptCompile Include="src\app\constants\splash-animation-type.ts" />
   </ItemGroup>
 
   <Target Name="DebugEnsureNodeEnv" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('$(SpaRoot)node_modules') ">
