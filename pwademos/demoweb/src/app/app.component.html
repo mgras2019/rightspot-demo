@@ -2,10 +2,14 @@
 <splash-screen [animationType]="0"
                [duration]="2"
                [animationDuration]="0.5"></splash-screen>
-<side-nav [sidenavTemplateRef]="navContent"
-          [navWidth]="280"
-          [duration]="0.5"></side-nav>
-<app-header></app-header>
+<div *ngIf="showHeader">
+  <side-nav [sidenavTemplateRef]="navContent"
+            [navWidth]="280"
+            [duration]="0.5"></side-nav>
+
+  <app-header></app-header>
+</div>
+
 <router-outlet></router-outlet>
 
 <ng-template #navContent>

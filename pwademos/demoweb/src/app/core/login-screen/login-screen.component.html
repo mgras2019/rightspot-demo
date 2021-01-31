@@ -1,1 +1,22 @@
-<p>login-screen works!</p>
+<header class="app-header">
+  <section class="app-header-logo"></section>
+  <section class="app-header-right">
+    <ng-container>
+      <div class="header-user-img">
+        <!--<img src="{{ (authUser | async)?.photoURL }}" />-->
+      </div>
+    </ng-container>
+  </section>
+</header>
+
+
+<div class="welcome-page app-page">
+  <div class="welcome-page-top">
+    <div class="welcome-page-logo">
+      <img src="./assets/icons/bus.svg" />
+    </div>
+    <div class="welcome-page-title">Welcome to RightSpot!</div>
+    <div class="welcome-page-subtitle">School Bus Tracking is a location based service that helps track the ocation of schoool children while in transit, anytime, anywhere, thereby ensuring their safety.</div>
+  </div>
+  <button (click)="login()" class="main-btn main-btn-active">Login</button>
+</div>
